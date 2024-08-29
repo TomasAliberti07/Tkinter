@@ -7,6 +7,7 @@ class GeneradorNumeros(tk.Tk):
         super().__init__()
 
         self.title("Generador de Números")
+        self.resizable(False,False)
         self.configure(bg='lavender')
         # Etiquetas
         self.label_num1 = tk.Label(self, text="Número 1")
