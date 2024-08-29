@@ -5,6 +5,7 @@ class ContCreciente(tk.Tk):
         super().__init__()
 
         self.contador = 0
+        self.resizable(False,False)
         self.configure(bg='black')
 
         self.title("Contador Creciente")

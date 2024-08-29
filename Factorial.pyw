@@ -8,7 +8,7 @@ class SacarFactorial(tk.Tk):
 
         # Configurar el color de fondo de la ventana
         self.configure(bg='lightseagreen')
-
+        self.resizable(False,False)
         self.title("Factorial")
 
         # Etiqueta para n

@@ -5,6 +5,7 @@ class Calculadora(tk.Tk):
         super().__init__()
 
         self.title("Calculadora")
+        self.resizable(False,False)
         self.configure(bg='black')
         self.operacion = tk.StringVar(value="sumar")
 

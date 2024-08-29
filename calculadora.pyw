@@ -5,6 +5,7 @@ class Calculadora(tk.Tk):
         super().__init__()
 
         self.title("Calculadora")
+        self.resizable(False,False)
         self.configure(bg='LightBlue')
         # Etiquetas
         self.label1 = tk.Label(self, text="Primer número")
@@ -36,7 +37,7 @@ class Calculadora(tk.Tk):
         self.boton_restar = tk.Button(self, text="-", command=self.restar)
         self.boton_restar.grid(row=3, column=1, padx=10, pady=10, sticky='nsew')
 
-        self.boton_multiplicar = tk.Button(self, text="*", command=self.multiplicar)
+        self.boton_multiplicar = tk.Button(self, text="x", command=self.multiplicar)
         self.boton_multiplicar.grid(row=4, column=0, padx=10, pady=10, sticky='nsew' )
 
         self.boton_dividir = tk.Button(self, text="/", command=self.dividir)

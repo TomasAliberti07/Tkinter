@@ -5,6 +5,7 @@ class Peliculas(tk.Tk):
         super().__init__()
 
         self.title("Películas")
+        self.resizable(False,False)
         self.configure(bg='LightGreen')
         # Etiqueta para el título
         self.label_title = tk.Label(self, text="Escribe el título de una película")
