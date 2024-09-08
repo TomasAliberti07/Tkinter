@@ -43,7 +43,7 @@ class Calculadora(tk.Tk):
         self.boton_dividir = tk.Button(self, text="/", command=self.dividir)
         self.boton_dividir.grid(row=4, column=1, padx=10, pady=10, sticky='nsew')
 
-        self.boton_modulo = tk.Button(self, text="%", command=self.modulo)
+        self.boton_modulo = tk.Button(self, text="%", command=self.porcentaje)
         self.boton_modulo.grid(row=5, column=0, padx=10, pady=10, sticky='nsew')
 
         self.boton_reset = tk.Button(self, text="RESET", command=self.reset)
@@ -88,10 +88,10 @@ class Calculadora(tk.Tk):
         self.lineEdit_resultado.insert(0, str(resultado))
         self.lineEdit_resultado.config(state='readonly')
 
-    def modulo(self):
+    def porcentaje(self):
         num1 = float(self.lineEdit1.get())
         num2 = float(self.lineEdit2.get())
-        resultado = num1 % num2
+        resultado = (num1*num2)/100
         self.lineEdit_resultado.config(state='normal')
         self.lineEdit_resultado.delete(0, tk.END)
         self.lineEdit_resultado.insert(0, str(resultado))

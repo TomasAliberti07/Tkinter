@@ -16,7 +16,7 @@ class ContDreciente(tk.Tk):
         self.mostrador_contador = tk.Entry(self, state='readonly')
         self.mostrador_contador.grid(row=0, column=1, padx=10, pady=10)  # Campo de entrada en la primera fila, segunda columna
 
-        self.boton = tk.Button(self, text="-", command=self.incrementar_contador)
+        self.boton = tk.Button(self, text="-", command=self.decreciente_contador)
         self.boton.grid(row=0, column=2, padx=10, pady=10)  # Botón en la primera fila, tercera columna
 
         # Actualizar el mostrador del contador inmediatamente
@@ -28,7 +28,7 @@ class ContDreciente(tk.Tk):
         self.mostrador_contador.insert(0, str(self.contador))
         self.mostrador_contador.config(state='readonly')
 
-    def incrementar_contador(self):
+    def decreciente_contador(self):
         self.contador -= 1
         self.actualizar_mostrador_contador()
 
